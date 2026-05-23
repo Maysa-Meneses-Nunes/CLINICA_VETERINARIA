@@ -1,0 +1,25 @@
+{
+  "name": "clinica_veterinaria",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Maysa-Meneses-Nunes/CLINICA_VETERINARIA.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Maysa-Meneses-Nunes/CLINICA_VETERINARIA/issues"
+  },
+  "homepage": "https://github.com/Maysa-Meneses-Nunes/CLINICA_VETERINARIA#readme",
+  "description": "",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mysql2": "^3.22.3"
+  }
+}
