@@ -1,4 +1,4 @@
-
+import agendarDB from"../DB/agendarDB.js";
 export default class agendar{
     #nome 
     #email
@@ -31,5 +31,8 @@ export default class agendar{
     }
      async gravar(){}
      async alterar(){}
-     async excluir(){}
+     async excluir(){ 
+        const produtoDB = new ProdutoDB();
+        return await produtoDB.consultar();
+     }
     }

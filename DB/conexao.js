@@ -7,10 +7,10 @@ export default async function obterConexao(){
     else
     {
         const poolConexoes = await mysql.createPool({
-             host:'localhost'
-             user: 'root'
-             password:'mysql@159753',
-            database: clinica,
+            host: process.env.DB_HOST,
+            user: process.env.DB_USUARIO,
+            password: process.env.DB_SENHA,
+            database: process.env.DB_BASE,        
             waitForConnections: true,
             connectionLimit: 10,
             queueLimit: 0
