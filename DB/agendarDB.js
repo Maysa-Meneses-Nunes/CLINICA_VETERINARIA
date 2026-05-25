@@ -1,5 +1,5 @@
 import obterConexao from "./conexao.js";
-import agendar from "../model/agendar";
+import agendar from "../model/agendar.js";
 
 export default class ageendarDB {
 

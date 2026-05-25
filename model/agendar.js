@@ -31,8 +31,9 @@ export default class agendar{
     }
      async gravar(){}
      async alterar(){}
-     async excluir(){ 
-        const produtoDB = new ProdutoDB();
-        return await produtoDB.consultar();
+     async excluir(){}
+     async consultar(){ 
+        const agendarDB = new agendarDB();
+        return await agendarDB.consultar();
      }
     }

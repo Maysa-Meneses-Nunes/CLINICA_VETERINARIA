@@ -1,5 +1,5 @@
-import agendar from "../model/agendar";
-import agendar from "../model/agendar";
+import agendar from "../model/agendar.js";
+
 
 export default class agendarCtrl{
 
@@ -10,7 +10,7 @@ export default class agendarCtrl{
         if(req.method == "GET" ){
             const agendar = new agendar();
 
-            produto.consultar()
+            agendar.consultar()
             .then((listaAgendar) =>{
                 resp.status(200).json({
                     status: "true",
