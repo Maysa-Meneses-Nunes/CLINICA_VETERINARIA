@@ -1,8 +1,9 @@
-import agendarDB from"../DB/agendarDB.js";
+import AgendarDB from"../DB/agendarDB.js";
 export default class agendar{
     #nome 
     #email
     #numero
+
     constructor(nome, email, numero) {
         this.#nome = nome
         this.#email = email
@@ -21,11 +22,23 @@ export default class agendar{
         return this.#numero
     }
 
+    set nome(nome) {
+        this.#nome = nome
+    }
+
+    set email(email) {
+        this.#email = email
+    }
+
+    set numero(numero) {
+        this.#numero= numero
+    }
+
     toJSON() {
         return {
             nome: this.#nome,
             email: this.#email,
-            numero: this.#numero,
+            numero: this.#numero
            
         }
     }
@@ -33,7 +46,7 @@ export default class agendar{
      async alterar(){}
      async excluir(){}
      async consultar(){ 
-        const agendarDB = new agendarDB();
+        const agendarDB = new AgendarDB();
         return await agendarDB.consultar();
      }
     }

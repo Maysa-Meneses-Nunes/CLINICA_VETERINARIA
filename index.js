@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import rotaagendar from './routes/rotaagendar.js';
 
 dotenv.config();
+
 const porta = 3000;
 const host = '0.0.0.0';
 const app = express();

@@ -1,9 +1,9 @@
 import { Router } from "express";
-import agendarCtrl from "../Controller/agendarCtrl.js";
+import AgendarCtrl from "../Controller/agendarCtrl.js";
 
 
 const rotaagendar = Router();
-const agendarController = new agendarCtrl();
+const agendarController = new AgendarCtrl();
 
 rotaagendar.get("/", agendarController.consultar);
 

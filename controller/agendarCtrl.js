@@ -1,5 +1,5 @@
-import agendar from "../model/agendar.js";
-
+//import agendarDB from "../database/agendarDB.js";
+import Agendar from "../model/agendar.js";
 
 export default class agendarCtrl{
 
@@ -8,13 +8,13 @@ export default class agendarCtrl{
     excluir(req, resp){}
     consultar(req, resp){
         if(req.method == "GET" ){
-            const agendar = new agendar();
+            const agendar = new Agendar();
 
             agendar.consultar()
             .then((listaAgendar) =>{
                 resp.status(200).json({
                     status: "true",
-                    agendar: listaAgendar
+                    agenda: listaAgendar
                 });
             })
             .catch((erro) => {

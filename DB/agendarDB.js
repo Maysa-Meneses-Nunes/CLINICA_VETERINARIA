@@ -1,8 +1,7 @@
 import obterConexao from "./conexao.js";
-import agendar from "../model/agendar.js";
+import Agendar from "../model/agendar.js";
 
-export default class ageendarDB {
-
+export default class agendarDB {
     async gravar(agendar) {}
     async alterar(agendar) {}
     async excluir(agendar) {}
@@ -12,14 +11,15 @@ export default class ageendarDB {
         const [resultados, campos] = await conexao.query(sql);
         const listaAgendar = [];
         for (const resultado of resultados) {
-            const produto = new Agendar(
+            const agendar = new Agendar(
                 resultado.nome,
                 resultado.email,
-                resultado.numero,
+                resultado.numero
             );
             listaAgendar.push(agendar);
         }
-        return listaProdutos;
-        
-    }
+
+    return listaAgendar;
+    
+}
 }
